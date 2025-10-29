@@ -1,6 +1,6 @@
 import { getUser } from "@/actions";
 import { getProject } from "@/actions/get-project";
-import { MainContent } from "@/app/main-content";
+import { ClientWrapper } from "@/app/client-wrapper";
 import { redirect } from "next/navigation";
 
 interface PageProps {
@@ -23,5 +23,5 @@ export default async function ProjectPage({ params }: PageProps) {
     redirect("/");
   }
 
-  return <MainContent user={user} project={project} />;
+  return <ClientWrapper user={user} project={project} />;
 }
